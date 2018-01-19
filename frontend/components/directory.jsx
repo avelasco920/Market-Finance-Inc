@@ -3,7 +3,7 @@ import SearchFilter from './search_filter';
 import DirectoryIndex from './directory_index';
 
 const Directory = () => (
-  <div className='directory-wrapper'>
+  <div className='directory'>
     <SearchFilter />
     <DirectoryIndex />
   </div>

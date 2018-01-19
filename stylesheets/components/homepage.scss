@@ -1,0 +1,40 @@
+.navbar {
+  width: 100%;
+  text-align: left;
+  padding: 15px 30px 15px 60px;
+  box-sizing: border-box;
+  font-family: $header;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $light-gray;
+  color: $gray;
+  h3:hover {
+    color: $blue;
+  }
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    h4 {
+      margin-left: 12px;
+      color: $gray;
+    }
+    .profile-img {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      overflow: hidden;
+      img {
+        object-fit: cover;
+        transform: translate(0, -8px);
+        filter: grayscale(100%);
+      }
+    }
+  }
+}
+
+.homepage {
+  display: flex;
+  width: 100%;
+}
