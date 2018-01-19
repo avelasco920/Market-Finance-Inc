@@ -1,7 +1,12 @@
 import React from 'react';
+import Directory from './directory';
+import CompanyShow from './company_show';
 
 const Homepage = () => (
-  <div><h1>This is home.</h1></div>
+  <div className='homepage'>
+    <Directory />
+    <CompanyShow />
+  </div>
 );
 
 export default Homepage;
