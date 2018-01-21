@@ -1,9 +1,31 @@
 .directory {
   flex: 1;
-  border-right: 1px solid $light-gray;
+  border-left: 1px solid $light-gray;
   height: 100vh;
+}
+
+.search-filter {
+  height: 65px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid $light-gray;
+  input {
+    width: 100%;
+  }
+  .search-icon {
+    width: 20px;
+    height: 20px;
+    fill: $light-gray;
+  }
 }
 
 .company-show {
   flex: 3;
+}
+
+.fa-search {
+  width: 40px;
+  color: $gray;
 }
