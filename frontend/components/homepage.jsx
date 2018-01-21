@@ -4,8 +4,8 @@ import CompanyShow from './company_show';
 
 const Homepage = () => (
   <div className='homepage'>
-    <CompanyShow />
     <Directory />
+    <CompanyShow />
   </div>
 );
 

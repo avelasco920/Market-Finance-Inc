@@ -1,6 +1,6 @@
 .directory {
   flex: 1;
-  border-left: 1px solid $light-gray;
+  border-right: 1px solid $light-gray;
   height: 100vh;
 }
 
@@ -28,4 +28,12 @@
 .fa-search {
   width: 40px;
   color: $gray;
+}
+.navbar-icon {
+  width: 40px;
+  color: $gray;
+}
+.navbar-icon:hover {
+  color: $blue;
+  cursor: pointer;
 }
