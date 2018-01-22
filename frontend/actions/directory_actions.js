@@ -1,6 +1,6 @@
 export const RECEIVE_FOLDERS = 'RECEIVE_FOLDERS';
 export const FILL_FOLDER = 'FILL_FOLDER';
-export const EMPTY_FOLDER = 'EMPTY_FOLDER';
+export const CLEAR_FOLDER = 'CLEAR_FOLDER';
 export const RECEIVE_DIRECTORY_INDEX = 'RECEIVE_DIRECTORY_INDEX';
 
 export const receiveFolders = () => ({
@@ -13,7 +13,7 @@ export const fillFolder = folderName => ({
 });
 
 export const emptyFolder = folderName => ({
-  type: EMPTY_FOLDER,
+  type: CLEAR_FOLDER,
   folderName
 });
 

@@ -3,29 +3,32 @@ import {
   RECEIVE_FOLDERS,
   RECEIVE_DIRECTORY_INDEX,
   FILL_FOLDER,
-  EMPTY_FOLDER
+  CLEAR_FOLDER
 } from '../actions/directory_actions';
 
 const DirectoryReducer = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_FOLDERS:
-      let folders = Object.keys(initialState);
+      // returns empty folders
+      let folders = Object.keys(seedData);
       const obj = {};
-      folders.forEach( name => obj[name] = [] );
+      folders.forEach( folderName => obj[folderName] = [] );
       return obj;
     case FILL_FOLDER:
       folders = merge({}, state);
-      let folder = {[action.folderName]: initialState[action.folderName]};
+      let folder = {[action.folderName]: seedData[action.folderName]};
       return merge({}, folders, folder);
-    case EMPTY_FOLDER:
+    case CLEAR_FOLDER:
       folders = merge({}, state);
       folders[action.folderName] = [];
       return folders;
     case RECEIVE_DIRECTORY_INDEX:
+      // remove folder from directory view to show all
+      // companies listed in alphabetical order
       const index = {};
-      Object.keys(initialState).forEach( folderName => {
-        initialState[folderName].forEach( company => {
+      Object.keys(seedData).forEach( folderName => {
+        seedData[folderName].forEach( company => {
           index[company.symbol] = company;
         });
       });
@@ -39,7 +42,7 @@ const DirectoryReducer = (state = {}, action) => {
 
 export default DirectoryReducer;
 
-const initialState = {
+const seedData = {
   'Energy': [
     {
       'symbol': 'XOM',

@@ -14,7 +14,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => ({
   fetchDirectoryFolders: () => dispatch(fetchDirectoryFolders()),
-  fetchDirectoryIndex: folderName => dispatch(fetchDirectoryIndex(folderName)),
+  fetchDirectoryIndex: () => dispatch(fetchDirectoryIndex()),
   openFolder: folderName => dispatch(openFolder(folderName)),
   closeFolder: folderName => dispatch(closeFolder(folderName))
 });

@@ -4,7 +4,7 @@ import DirectoryIndex from './directory_index';
 
 class Directory extends React.Component {
   componentWillMount() {
-    this.props.fetchDirectoryIndex();
+    this.props.fetchDirectoryFolders();
   }
 
   render() {
