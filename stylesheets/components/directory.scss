@@ -4,20 +4,25 @@
   height: 100vh;
 }
 
-.search-filter {
+.filter {
   height: 65px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  padding: 20px;
   border-bottom: 1px solid $light-gray;
-  input {
-    width: 100%;
+  background-color: white;
+  h4 {
+    width: 50%;
+    text-align: center;
+    line-height: 65px;
   }
-  .search-icon {
-    width: 20px;
-    height: 20px;
-    fill: $light-gray;
+  .inactive:hover {
+    cursor: pointer;
+    color: $blue;
+  }
+  .active {
+    color: white;
+    background-color: $blue;
   }
 }
 
@@ -35,5 +40,40 @@
 }
 .navbar-icon:hover {
   color: $blue;
+  cursor: pointer;
+}
+
+.directory-folder {
+  background-color: white;
+  color: $light-gray;
+  padding: 20px 10px;
+  // padding: 20px 20px 0px 20px;
+  margin-bottom: 10px;
+  // border-bottom: 1px solid $light-gray;
+  display: flex;
+  align-items: center;
+  i {
+    padding-right: 10px;
+  }
+}
+.directory-folder:hover {
+  color: $blue;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  z-index: 6000;
+}
+
+.directory-company {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+  color: $gray;
+  padding: 20px;
+  background-color: $lightest-gray;
+  border: 1px solid white;
+}
+.directory-company:hover {
+  color: $blue;
+  background-color: white;
   cursor: pointer;
 }

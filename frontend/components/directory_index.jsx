@@ -1,23 +1,35 @@
 import React from 'react';
 import SearchFilter from './search_filter';
-import DirectoryIndexItem from './directory_index_item';
+import DirectoryIndexItemCompany from './directory_index_item_company';
+import DirectoryIndexItemFolder from './directory_index_item_folder';
 
 class DirectoryIndex extends React.Component {
+  constructor(props) {
+    super(props);
+    this.toggleFolder = this.toggleFolder.bind(this);
+  }
+
   componentWillMount() {
     this.props.fetchDirectoryFolders();
   }
 
+  toggleFolder(folderName, folderContent) {
+    if (folderContent.length) {
+      this.props.closeFolder(folderName);
+    } else if (!folderContent.length) {
+      this.props.openFolder(folderName);
+    }
+  }
+
   render() {
     const { directoryContent, directoryLoading } = this.props;
-    console.log('directoryLoading', directoryLoading);
-    console.log('directoryContent', directoryContent);
     if ( directoryLoading ) {
       return <div></div>;
     } else if (Array.isArray(this.props.directoryContent)) {
       return(
         <div id='directory-index'>
           { directoryContent.forEach( company =>
-            <DirectoryIndexItem company={company} />
+            <DirectoryIndexItemCompany company={company} />
           )}
         </div>
       );
@@ -25,10 +37,11 @@ class DirectoryIndex extends React.Component {
       return(
         <div id='directory-index'>
           { Object.keys(directoryContent).map( folderName =>
-            <DirectoryIndexItem
+            <DirectoryIndexItemFolder
               key={folderName}
               folderName={folderName}
               folderContent={directoryContent[folderName]}
+              toggleFolder={this.toggleFolder}
             />
           )}
         </div>
