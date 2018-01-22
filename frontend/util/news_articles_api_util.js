@@ -7,5 +7,3 @@ export const fetchNewsArticles = () => (
     dataType: "JSON",
   })
 );
-
-window.fetchNewsArticles = fetchNewsArticles;

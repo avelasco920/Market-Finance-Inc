@@ -7,16 +7,16 @@ export const startLoadingNewsArticles = () => ({
   type: START_LOADING_NEWS_ARTICLES
 });
 
-export const receiveNewsArticles = newsArticles => ({
+export const receiveNewsArticles = data => ({
   type: RECEIVE_NEWS_ARTICLES,
-  newsArticles
+  data
 });
 
 export const fetchNewsArticles = () => dispatch => {
   dispatch(startLoadingNewsArticles());
   return APIUtil.fetchNewsArticles()
-    .then(newsArticles => (
-      dispatch(receiveNewsArticles(newsArticles))
+    .then(data => (
+      dispatch(receiveNewsArticles(data))
     )
   );
 };

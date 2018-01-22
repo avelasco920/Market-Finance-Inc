@@ -8,6 +8,8 @@ import { fetchNewsArticles } from './util/news_articles_api_util';
 document.addEventListener("DOMContentLoaded", () => {
 	window.fetchNewsArticles = fetchNewsArticles;
 	let store = configureStore();
+	window.dispatch = store.dispatch;
+	window.getState = store.getState;
 	const root = document.getElementById("root");
 	ReactDOM.render(<Root store={store}/>, root);
 });
