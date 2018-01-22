@@ -11,6 +11,12 @@
   align-items: center;
   border-bottom: 1px solid $light-gray;
   color: $gray;
+  i {
+    width: auto;
+  }
+  span {
+    margin-left: 10px;
+  }
   h3:hover {
     color: $blue;
     cursor: pointer;
@@ -34,6 +40,10 @@
       }
     }
   }
+}
+
+.company-show {
+  flex: 3;
 }
 
 .homepage {

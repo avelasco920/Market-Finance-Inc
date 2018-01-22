@@ -12,7 +12,7 @@ const DirectoryIndexItemFolder = props => {
         <h3>{folderName}</h3>
       </div>
       { folderContent.map( company =>
-        <DirectoryIndexItemCompany company={company}/>
+        <DirectoryIndexItemCompany key={company.name} company={company}/>
       )}
     </div>
   );

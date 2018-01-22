@@ -3,6 +3,8 @@ export const RECEIVE_FOLDERS = 'RECEIVE_FOLDERS';
 export const FILL_FOLDER = 'FILL_FOLDER';
 export const CLEAR_FOLDER = 'CLEAR_FOLDER';
 export const RECEIVE_DIRECTORY_INDEX = 'RECEIVE_DIRECTORY_INDEX';
+export const HIDE_DIRECTORY = 'HIDE_DIRECTORY';
+export const SHOW_DIRECTORY = 'SHOW_DIRECTORY';
 
 export const startLoadingDirectory = () => ({
   type: START_LOADING_DIRECTORY
@@ -26,6 +28,14 @@ export const receiveDirectoryIndex = () => ({
   type: RECEIVE_DIRECTORY_INDEX
 });
 
+export const hideDirectory = () => ({
+  type: HIDE_DIRECTORY
+});
+
+export const showDirectory = () => ({
+  type: SHOW_DIRECTORY,
+});
+
 export const fetchDirectoryFolders = () => dispatch => {
   dispatch(startLoadingDirectory());
   dispatch(receiveFolders());
@@ -42,4 +52,12 @@ export const closeFolder = folderName => dispatch => {
 export const fetchDirectoryIndex = () => dispatch => {
   dispatch(startLoadingDirectory());
   dispatch(receiveDirectoryIndex());
+};
+
+export const toggleDirectoryShow = () => dispatch => {
+  dispatch(showDirectory());
+};
+
+export const toggleDirectoryHide = () => dispatch => {
+  dispatch(hideDirectory());
 };

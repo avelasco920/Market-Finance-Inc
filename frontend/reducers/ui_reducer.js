@@ -4,6 +4,8 @@ import {
   START_LOADING_DIRECTORY,
   RECEIVE_FOLDERS,
   RECEIVE_DIRECTORY_INDEX,
+  HIDE_DIRECTORY,
+  SHOW_DIRECTORY
 } from '../actions/directory_actions';
 
 import {
@@ -11,15 +13,10 @@ import {
   RECEIVE_NEWS_ARTICLES,
 } from '../actions/news_articles_actions';
 
-import {
-  HIDE_DIRECTORY,
-  SHOW_DIRECTORY
-} from '../actions/ui_actions';
-
 const initialState = {
   directoryLoading: true,
   newsArticlesLoading: true,
-  directoryHidden: true
+  directoryHidden: false
 };
 
 const searchReducer = (state = initialState, action ) => {

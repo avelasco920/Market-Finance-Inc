@@ -1,9 +1,9 @@
 import React from 'react';
-import Navbar from './navbar';
+import NavbarContainer from './navbar_container';
 
 const CompanyShow = () => (
   <div className='company-show'>
-    <Navbar />
+    <NavbarContainer />
   </div>
 );
 

@@ -1,8 +1,20 @@
-.directory {
-  flex: 1;
+#directory {
   border-right: 1px solid $light-gray;
   height: 100vh;
+  transition: .5s ease;
+  box-sizing: border-box;
 }
+
+.directory-show {
+  transform: translateX(0);
+  width: 300px;
+}
+
+.directory-hidden {
+  transform: translateX(-300px);
+  width: 0;
+}
+
 
 .filter {
   height: 65px;
@@ -16,6 +28,9 @@
     text-align: center;
     line-height: 65px;
   }
+  .inactive {
+    color: $gray;
+  }
   .inactive:hover {
     cursor: pointer;
     color: $blue;
@@ -26,8 +41,9 @@
   }
 }
 
-.company-show {
-  flex: 3;
+#directory-index {
+  overflow: scroll;
+  height: calc(100vh - 65px);
 }
 
 .fa-search {
@@ -46,10 +62,8 @@
 .directory-folder {
   background-color: white;
   color: $light-gray;
-  padding: 20px 10px;
-  // padding: 20px 20px 0px 20px;
+  padding: 20px;
   margin-bottom: 10px;
-  // border-bottom: 1px solid $light-gray;
   display: flex;
   align-items: center;
   i {

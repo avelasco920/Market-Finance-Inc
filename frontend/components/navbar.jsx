@@ -4,15 +4,24 @@ class Navbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      directoryHidden: true
+      directoryHidden: this.props.directoryHidden
     };
+    this.toggleDirectoryVisibility = this.toggleDirectoryVisibility.bind(this);
+  }
+
+  toggleDirectoryVisibility() {
+    if (this.props.directoryHidden) {
+      this.props.toggleDirectoryShow();
+    } else {
+      this.props.toggleDirectoryHide();
+    }
   }
 
   renderIcon() {
-    if (this.state.directoryHidden) {
-      return <i className="fa fa-search navbar-icon" aria-hidden="true"></i>;
+    if (this.props.directoryHidden) {
+      return <i className="fa fa-search navbar-icon" aria-hidden="true" onClick={this.toggleDirectoryVisibility}><span>More Companies</span></i>;
     } else {
-      return <i className="fa fa-chevron-left navbar-icon" aria-hidden="true"></i>;
+      return <i className="fa fa-chevron-left navbar-icon" aria-hidden="true" onClick={this.toggleDirectoryVisibility}><span>Hide</span></i>;
     }
   }
 

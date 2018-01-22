@@ -10,7 +10,6 @@ class SearchFilter extends React.Component {
   }
 
   toggleActive(elementClicked) {
-    debugger;
     const byFolder = document.getElementById('by-folder');
     const allCompanies = document.getElementById('all-companies');
     if (this.state.active === elementClicked) {
@@ -20,12 +19,14 @@ class SearchFilter extends React.Component {
       byFolder.classList.toggle('active');
       allCompanies.classList.toggle('inactive');
       byFolder.classList.toggle('inactive');
+      this.props.fetchDirectoryIndex();
       this.setState({ active: 'companies' });
     } else {
       byFolder.classList.toggle('active');
       allCompanies.classList.toggle('active');
       byFolder.classList.toggle('inactive');
       allCompanies.classList.toggle('inactive');
+      this.props.fetchDirectoryFolders();
       this.setState({ active: 'folder' });
     }
   }

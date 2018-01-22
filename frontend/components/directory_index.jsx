@@ -1,5 +1,4 @@
 import React from 'react';
-import SearchFilter from './search_filter';
 import DirectoryIndexItemCompany from './directory_index_item_company';
 import DirectoryIndexItemFolder from './directory_index_item_folder';
 
@@ -28,8 +27,8 @@ class DirectoryIndex extends React.Component {
     } else if (Array.isArray(this.props.directoryContent)) {
       return(
         <div id='directory-index'>
-          { directoryContent.forEach( company =>
-            <DirectoryIndexItemCompany company={company} />
+          { directoryContent.map( company =>
+            <DirectoryIndexItemCompany key={company.name} company={company} />
           )}
         </div>
       );
