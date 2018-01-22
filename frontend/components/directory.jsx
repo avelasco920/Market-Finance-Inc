@@ -1,20 +1,12 @@
 import React from 'react';
 import SearchFilter from './search_filter';
-import DirectoryIndex from './directory_index';
+import DirectoryIndexContainer from './directory_index_container';
 
-class Directory extends React.Component {
-  componentWillMount() {
-    this.props.fetchDirectoryFolders();
-  }
-
-  render() {
-    return(
-      <div className='directory'>
-        <SearchFilter />
-        <DirectoryIndex />
-      </div>
-    );
-  }
-}
+const Directory = () => (
+  <div className='directory'>
+    <SearchFilter />
+    <DirectoryIndexContainer />
+  </div>
+);
 
 export default Directory;

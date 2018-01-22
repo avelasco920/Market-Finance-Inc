@@ -5,10 +5,12 @@ import {
   openFolder,
   closeFolder
 } from '../actions/directory_actions';
-import Directory from './directory';
+import DirectoryIndex from './directory_index';
 
 const mapStateToProps = (state) => {
   return {
+    directoryLoading: state.ui.directoryLoading,
+    directoryContent: state.entities.directory
   };
 };
 
@@ -22,4 +24,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Directory);
+)(DirectoryIndex);
