@@ -23,14 +23,15 @@ const DirectoryReducer = (state = {}, action) => {
       folders[action.folderName] = [];
       return folders;
     case RECEIVE_DIRECTORY_INDEX:
-      const index = [];
+      const index = {};
       Object.keys(initialState).forEach( folderName => {
         initialState[folderName].forEach( company => {
-          index.push( company );
+          index[company.symbol] = company;
         });
       });
-      debugger;
-      return index;
+      const sorted = [];
+      Object.keys(index).sort().forEach( companyName => sorted.push(index[companyName]));
+      return sorted;
     default:
       return state;
   }
