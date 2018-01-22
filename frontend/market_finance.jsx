@@ -4,9 +4,11 @@ import Root from './components/root';
 import configureStore from './store/store';
 import style from '../stylesheets/application.scss';
 import { fetchNewsArticles } from './util/news_articles_api_util';
+import { closeFolder } from './actions/directory_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
 	window.fetchNewsArticles = fetchNewsArticles;
+	window.closeFolder = closeFolder;
 	let store = configureStore();
 	window.dispatch = store.dispatch;
 	window.getState = store.getState;
