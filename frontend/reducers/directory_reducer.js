@@ -85,7 +85,7 @@ const seedData = {
       'name': 'Microsoft'
     }, {
       'symbol': 'SAP',
-      'name': 'SAP'
+      'name': 'SAP SE'
     }
   ]
 };

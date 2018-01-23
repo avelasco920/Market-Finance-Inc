@@ -5,7 +5,8 @@ const newsArticles = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_NEWS_ARTICLES:
-      return action.data.map(article => article['sentence']);
+      // return action.data.map(article => article['sentence']);
+      return action.data.articles;
     default:
       return state;
   }

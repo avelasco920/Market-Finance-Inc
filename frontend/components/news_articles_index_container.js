@@ -13,7 +13,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchNewsArticles: () => dispatch(fetchNewsArticles()),
+  fetchNewsArticles: companyName => dispatch(fetchNewsArticles(companyName)),
 });
 
 export default connect(

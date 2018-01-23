@@ -7,8 +7,10 @@ class Directory extends React.Component {
     const directory = document.getElementById('directory');
     if (nextProps.directoryHidden === true) {
       directory.classList.remove('directory-show');
+      directory.classList.add('directory-hidden');
     } else if (nextProps.directoryHidden === false) {
       directory.classList.add('directory-show');
+      directory.classList.remove('directory-hidden');
     }
   }
 

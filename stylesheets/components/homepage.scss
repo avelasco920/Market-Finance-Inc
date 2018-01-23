@@ -36,7 +36,6 @@
       img {
         object-fit: cover;
         transform: translate(4px, 22px) scale(6);
-        filter: grayscale(100%);
       }
     }
   }
@@ -49,12 +48,12 @@
 
 .company-show {
   flex: 3;
-  min-width: 700px;
+  min-width: 750px;
 }
 
 #chart {
   min-width: 550px;
-  width: 550px;
+  max-width: 700px;
   height: 500px;
   margin-right: 40px;
 }
@@ -66,6 +65,8 @@
     display: flex;
     flex-direction: column;
     padding: 60px 80px;
+    max-width: 1400px;
+    margin: auto;
   }
 }
 
@@ -104,6 +105,17 @@
   color: $gray;
   background-color: $lightest-gray;
   border-bottom: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  .news-article-description {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .news-article-source {
+    margin-top: 10px;
+    font-size: 10px;
+  }
 }
 .news-articles-index-item:hover {
   background-color: white;

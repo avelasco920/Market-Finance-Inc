@@ -22,6 +22,8 @@ class DirectoryIndex extends React.Component {
   }
 
   switchCompany(company) {
+    console.log('company', company.name);
+    this.props.fetchNewsArticles(company.name);
     this.props.fetchCompany(company);
   }
 

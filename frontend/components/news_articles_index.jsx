@@ -3,7 +3,7 @@ import NewsArticlesIndexItem from './news_articles_index_item';
 
 class NewsArticlesIndex extends React.Component {
   componentWillMount() {
-    this.props.fetchNewsArticles();
+    this.props.fetchNewsArticles(this.props.company.symbol);
   }
 
   render() {
@@ -17,7 +17,7 @@ class NewsArticlesIndex extends React.Component {
           <ul id='news-articles-index'>
             { newsArticles.map( (newsArticle, i) =>
               <NewsArticlesIndexItem key={i} newsArticle={newsArticle}/>
-            ) }
+            )}
           </ul>
         </div>
       );

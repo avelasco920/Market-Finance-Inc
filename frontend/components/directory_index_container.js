@@ -6,6 +6,7 @@ import {
   closeFolder
 } from '../actions/directory_actions';
 import { fetchCompany } from '../actions/company_actions';
+import { fetchNewsArticles } from '../actions/news_articles_actions';
 import DirectoryIndex from './directory_index';
 
 const mapStateToProps = (state) => {
@@ -18,6 +19,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => ({
   fetchDirectoryFolders: () => dispatch(fetchDirectoryFolders()),
   fetchDirectoryIndex: () => dispatch(fetchDirectoryIndex()),
+  fetchNewsArticles: companyName => dispatch(fetchNewsArticles(companyName)),
   openFolder: folderName => dispatch(openFolder(folderName)),
   closeFolder: folderName => dispatch(closeFolder(folderName)),
   fetchCompany: company => dispatch(fetchCompany(company))
