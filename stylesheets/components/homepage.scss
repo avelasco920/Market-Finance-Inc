@@ -55,6 +55,7 @@
   flex: 3;
   min-height: 500px;
   margin-right: 40px;
+  height: 500px;
 }
 
 #content-wrapper-fixed {
@@ -129,8 +130,6 @@
     width: auto;
     margin-bottom: 60px;
     margin-right: 0px;
-    min-height: 500px;
-    height: 500px;
   }
   #content {
     flex-direction: column;
