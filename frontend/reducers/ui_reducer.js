@@ -16,7 +16,7 @@ import {
 const initialState = {
   directoryLoading: true,
   newsArticlesLoading: true,
-  directoryHidden: false
+  directoryHidden: false,
 };
 
 const searchReducer = (state = initialState, action ) => {

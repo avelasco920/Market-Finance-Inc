@@ -42,11 +42,37 @@
   }
 }
 
+.homepage {
+  display: flex;
+  width: 100%;
+}
+
 .company-show {
   flex: 3;
 }
 
-.homepage {
+#chart {
+  width: 600px;
+  height: 500px;
+  margin-right: 40px;
+}
+
+#content-wrapper {
   display: flex;
-  width: 100%;
+  flex-direction: column;
+  padding: 60px 80px;
+}
+
+#content-header {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 10px;
+  h1 {
+    margin-right: 10px;
+    color: $blue;
+  }
+  h4 {
+    color: $gray;
+    font-size: 24px;
+  }
 }
