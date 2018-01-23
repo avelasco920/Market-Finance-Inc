@@ -43,7 +43,7 @@ to easily manage dependencies across the different components.
   were used to create the `directory`, however the `DirectoryIndexItem`
   component was able to be used in both.
 
-![Demo](https://s3-us-west-1.amazonaws.com/market-finance/demo.gif)
+![Demo](http://s3-us-west-1.amazonaws.com/market-finance/demo.gif)
 
 ### Responsiveness and Browser Compatibility
 
@@ -59,5 +59,5 @@ dimensions for the adjacent `Chart` and `NewsIndex`.
   a max width once the screen gets too big. All responsive styling is
   done with CSS3 and no external library.
 
-![Responsive](https://s3-us-west-1.amazonaws.com/market-finance/responsive.gif)
+![Responsive](http://s3-us-west-1.amazonaws.com/market-finance/responsive.gif)
 
