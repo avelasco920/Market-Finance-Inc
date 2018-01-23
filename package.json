@@ -2,6 +2,7 @@
   "name": "MarketFinance",
   "version": "1.0.0",
   "main": "index.js",
+  "homepage": "https://avelasco920.github.io/Market-Finance-Inc/",
   "scripts": {
     "start": "webpack --watch"
   },
