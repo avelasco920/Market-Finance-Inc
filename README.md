@@ -26,7 +26,7 @@ and Motley Fool
 + jQuery
 + Font-Awesome
 
-## Demos
+## Implementation Considerations
 
 ### React/Redux
 
