@@ -37648,7 +37648,7 @@ var Navbar = function (_React$Component) {
           _react2.default.createElement(
             "div",
             { className: "profile-img" },
-            _react2.default.createElement("img", { src: "http://wandw.wdfiles.com/local--files/regulus/Regulus_02.jpg" })
+            _react2.default.createElement("img", { src: "https://wandw.wdfiles.com/local--files/regulus/Regulus_02.jpg" })
           ),
           _react2.default.createElement(
             "h4",
@@ -38023,8 +38023,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var NewsArticlesIndexItem = function NewsArticlesIndexItem(props) {
   return _react2.default.createElement(
-    'div',
-    { className: 'news-articles-index-item' },
+    'a',
+    { href: props.newsArticle.url, className: 'news-articles-index-item', target: '_blank' },
     _react2.default.createElement(
       'span',
       null,

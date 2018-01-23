@@ -39,7 +39,7 @@ class Navbar extends React.Component {
         <h3>Market Finance Inc</h3>
         <div className='navbar-right'>
           <div className='profile-img'>
-            <img src='http://wandw.wdfiles.com/local--files/regulus/Regulus_02.jpg'/>
+            <img src='https://wandw.wdfiles.com/local--files/regulus/Regulus_02.jpg'/>
           </div>
           <h4>investor_415</h4>
         </div>
