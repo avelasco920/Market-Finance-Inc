@@ -9,15 +9,17 @@ class Directory extends React.Component {
       // getting directoryHidden from ui slice of state.
       // adding directory-show css class creates a smooth transition
       // with css transition attribute
-      directory.classList.remove('directory-show');
+      directory.classList.remove('show-directory');
+      directory.classList.add('hide-directory');
     } else if (nextProps.directoryHidden === false) {
-      directory.classList.add('directory-show');
+      directory.classList.remove('hide-directory');
+      directory.classList.add('show-directory');
     }
   }
 
   render() {
     return(
-      <div id='directory' className='directory-hidden'>
+      <div id='directory'>
         <DirectoryFilterContainer />
         <DirectoryIndexContainer />
       </div>

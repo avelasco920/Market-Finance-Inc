@@ -1,23 +1,51 @@
 #directory {
   border-right: 1px solid $light-gray;
   height: 100vh;
-  transition: .5s ease;
+  // transition: .5s ease;
   box-sizing: border-box;
   // transform: translateX(0);
   // width: 300px;
 }
 
-.directory-hidden {
-  transition: .5s ease;
-  transform: translateX(-300px);
-  width: 0;
+.hide-directory {
+  // -webkit-animation: slideout 5s infinite; /* Safari 4+ */
+  // -moz-animation: slideout 5s infinite; /* Fx 5+ */
+  // -o-animation: slideout 5s infinite; /* Opera 12+ */
+  animation: slideout .5s; /* IE 10+, Fx 29+ */
+  // animation-iteration-count: 1;
+  // transition: .5s ease;
+  // transform: translateX(-300px);
+  // width: 0;
 }
 
-.directory-show {
-  transition: .5s ease;
-  transform: translateX(0);
-  width: 300px;
+// @-webkit-keyframes slideout {
+//   0%   { opacity: 0; }
+//   100% { opacity: 1; }
+// }
+// @-moz-keyframes slideout {
+//   0%   { opacity: 0; }
+//   100% { opacity: 1; }
+// }
+// @-o-keyframes slideout {
+//   0%   { opacity: 0; }
+//   100% { opacity: 1; }
+// }
+@keyframes slideout {
+  0%   { transform: translateX(0); width: 300px; }
+  100% { transform: translateX(-300px); width: 0; }
+}
+
+.show-directory {
+  // transition: .5s ease;
+  // transform: translateX(0);
+  // width: 300px;
+  animation: slidein .5s; /* IE 10+, Fx 29+ */
+  // animation-iteration-count: 1;
   min-width: 300px;
+}
+@keyframes slidein {
+  0% { transform: translateX(-300px); width: 0; }
+  100%   { transform: translateX(0); width: 300px; }
 }
 
 .filter {
