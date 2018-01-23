@@ -22,7 +22,7 @@ class DirectoryIndex extends React.Component {
   }
 
   switchCompany(company) {
-    console.log('company', company.name);
+    // function switches active company to one that is clicked/selected
     this.props.fetchNewsArticles(company.name);
     this.props.fetchCompany(company);
   }
@@ -32,6 +32,8 @@ class DirectoryIndex extends React.Component {
     if ( directoryLoading ) {
       return <div></div>;
     } else if (Array.isArray(this.props.directoryContent)) {
+      // if objects in store is in array, then objects represent
+      // individual companies
       return(
         <div id='directory-index'>
           { directoryContent.map( company =>
@@ -44,6 +46,9 @@ class DirectoryIndex extends React.Component {
         </div>
       );
     } else {
+      // if objects in directory slice of state are not in an array,
+      // object keys are folders and values are an array with
+      // different companies
       return(
         <div id='directory-index'>
           { Object.keys(directoryContent).map( folderName =>

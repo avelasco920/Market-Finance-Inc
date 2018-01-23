@@ -6,6 +6,7 @@ const newsArticles = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_NEWS_ARTICLES:
       // return action.data.map(article => article['sentence']);
+      // above code was from original/provided api source
       return action.data.articles;
     default:
       return state;

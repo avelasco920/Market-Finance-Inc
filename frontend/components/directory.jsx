@@ -6,11 +6,12 @@ class Directory extends React.Component {
   componentWillReceiveProps(nextProps) {
     const directory = document.getElementById('directory');
     if (nextProps.directoryHidden === true) {
+      // getting directoryHidden from ui slice of state.
+      // adding directory-show css class creates a smooth transition
+      // with css transition attribute
       directory.classList.remove('directory-show');
-      directory.classList.add('directory-hidden');
     } else if (nextProps.directoryHidden === false) {
       directory.classList.add('directory-show');
-      directory.classList.remove('directory-hidden');
     }
   }
 

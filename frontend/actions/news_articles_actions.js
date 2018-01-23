@@ -13,7 +13,6 @@ export const receiveNewsArticles = data => ({
 });
 
 export const fetchNewsArticles = companyName => dispatch => {
-  console.log('companyName', companyName);
   dispatch(startLoadingNewsArticles());
   return APIUtil.fetchNewsArticles(companyName)
     .then(data => (

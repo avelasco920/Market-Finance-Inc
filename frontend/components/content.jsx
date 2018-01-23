@@ -3,6 +3,7 @@ import ChartContainer from './chart_container';
 import NewsArticlesIndexContainer from './news_articles_index_container';
 
 const Content = props => (
+  // added secondary wrapper around content to allow css overflow scroll
   <div id='content-wrapper-fixed'>
     <div id='content-wrapper'>
       <div id='content-header'>

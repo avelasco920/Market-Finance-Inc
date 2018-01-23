@@ -10,7 +10,7 @@ const DirectoryReducer = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_FOLDERS:
-      // returns empty folders
+      // returns empty folders in directory
       let folders = Object.keys(seedData);
       const obj = {};
       folders.forEach( folderName => obj[folderName] = [] );

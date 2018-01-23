@@ -12,15 +12,22 @@ class Navbar extends React.Component {
   toggleDirectoryVisibility() {
     if (this.props.directoryHidden) {
       this.props.toggleDirectoryShow();
+      // makes an action call to update visbility state in store
+      // to trigger directory/drawer component to show
     } else {
+      // makes an action call to update visbility state in store
+      // to trigger directory/drawer component to hide
       this.props.toggleDirectoryHide();
     }
   }
 
   renderIcon() {
+    // toggles icon and message depending on directory/drawer visibility
     if (this.props.directoryHidden) {
+      // shows a search icon and directory message if drawer is closed
       return <i className="fa fa-search navbar-icon" aria-hidden="true" onClick={this.toggleDirectoryVisibility}><span>Directory</span></i>;
     } else {
+      // shows an arrow and hide message if drawer is open
       return <i className="fa fa-chevron-left navbar-icon" aria-hidden="true" onClick={this.toggleDirectoryVisibility}><span>Hide</span></i>;
     }
   }
@@ -32,9 +39,9 @@ class Navbar extends React.Component {
         <h3>Market Finance Inc</h3>
         <div className='navbar-right'>
           <div className='profile-img'>
-            <img src='http://2.bp.blogspot.com/-zj8mwZ6ZCpI/UlR8EwnfvtI/AAAAAAAAAH0/WWqRHDiQjxY/s1600/american-psycho-2000-1080p-bluray-x264-hdmi-mkv_snapshot_00-26-59_2011-03-21_01-50-22-jpg.jpeg'/>
+            <img src='http://wandw.wdfiles.com/local--files/regulus/Regulus_02.jpg'/>
           </div>
-          <h4>P_Bateman</h4>
+          <h4>investor_415</h4>
         </div>
       </div>
     );

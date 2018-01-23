@@ -17,9 +17,13 @@ class SearchFilter extends React.Component {
     } else if (this.state.active === 'folder') {
       allCompanies.classList.toggle('active');
       byFolder.classList.toggle('active');
+      // adds styling class based on active filter
       allCompanies.classList.toggle('inactive');
       byFolder.classList.toggle('inactive');
+      // inactive css class creates cursor styling indicating
+      // users' ability to click inactive filter
       this.props.fetchDirectoryIndex();
+      // dispatches action to update directory in redux store
       this.setState({ active: 'companies' });
     } else {
       byFolder.classList.toggle('active');
@@ -27,6 +31,7 @@ class SearchFilter extends React.Component {
       byFolder.classList.toggle('inactive');
       allCompanies.classList.toggle('inactive');
       this.props.fetchDirectoryFolders();
+      // dispatches action to update directory in redux store
       this.setState({ active: 'folder' });
     }
   }

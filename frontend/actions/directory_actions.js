@@ -55,6 +55,8 @@ export const fetchDirectoryIndex = () => dispatch => {
 };
 
 export const toggleDirectoryShow = () => dispatch => {
+  // directory visibility persists in store because multiple
+  // components depend on visbility setting
   dispatch(showDirectory());
 };
 
