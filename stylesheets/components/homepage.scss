@@ -49,18 +49,24 @@
 
 .company-show {
   flex: 3;
+  min-width: 1000px;
 }
 
 #chart {
-  width: 600px;
+  min-width: 550px;
+  width: 550px;
   height: 500px;
   margin-right: 40px;
 }
 
-#content-wrapper {
-  display: flex;
-  flex-direction: column;
-  padding: 60px 80px;
+#content-wrapper-fixed {
+  overflow: scroll;
+  height: calc(100vh - 65px);
+  #content-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 80px;
+  }
 }
 
 #content-header {
@@ -74,5 +80,44 @@
   h4 {
     color: $gray;
     font-size: 24px;
+  }
+}
+
+#content {
+  display: flex;
+}
+
+#news-articles-wrapper {
+  border: 1px solid $light-gray;
+  h4 {
+    color: $gray;
+    padding: 10px 20px;
+  }
+  #news-articles-index {
+    height: 465px;
+    overflow: scroll;
+  }
+}
+
+.news-articles-index-item {
+  padding: 20px;
+  color: $gray;
+  background-color: $lightest-gray;
+  border-bottom: 1px solid white;
+}
+.news-articles-index-item:hover {
+  background-color: white;
+  color: $blue;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 950px)  {
+  #chart {
+    width: auto;
+    margin-bottom: 60px;
+    margin-right: 0px;
+  }
+  #content {
+    flex-direction: column;
   }
 }
