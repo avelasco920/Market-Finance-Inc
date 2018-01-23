@@ -1,6 +1,4 @@
-# Market Finance Inc
-
-[Live Link](https://avelasco920.github.io/Market-Finance-Inc/#/)
+# [Market Finance Inc](https://avelasco920.github.io/Market-Finance-Inc/#/)
 
 Market Finance Inc is a dynamic single-app financial trading webpage
 for users to visualize financial data and read news relating to
@@ -57,3 +55,4 @@ dimensions for the adjacent `Chart` and `NewsIndex`.
   a max width once the screen gets too big. All responsive styling is
   done with CSS3 and no external library.
 
+[Live Link](https://avelasco920.github.io/Market-Finance-Inc/#/)
