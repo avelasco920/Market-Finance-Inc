@@ -59,4 +59,4 @@ dimensions for the adjacent `Chart` and `NewsIndex`.
   a max width once the screen gets too big. All responsive styling is
   done with CSS3 and no external library.
 
-![Demo](https://s3-us-west-1.amazonaws.com/market-finance/responsive.gif)
+![Responsive](https://s3-us-west-1.amazonaws.com/market-finance/responsive.gif)
