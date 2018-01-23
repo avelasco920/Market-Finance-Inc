@@ -1,7 +1,5 @@
 # Market Finance Inc
 
-[Link to site](https://stocksoverflow.herokuapp.com/#/)
-
 Market Finance Inc is a dynamic single-app financial trading webpage
 for users to visualize financial data and read news relating to
 specific companies.

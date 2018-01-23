@@ -52,8 +52,8 @@
 }
 
 #chart {
-  min-width: 650px;
-  height: 500px;
+  flex: 3;
+  min-height: 500px;
   margin-right: 40px;
 }
 
@@ -88,9 +88,11 @@
 }
 
 #news-articles-wrapper {
+  flex: 2;
   border: 1px solid $light-gray;
   h4 {
-    color: $gray;
+    color: white;
+    background-color: $blue;
     padding: 10px 20px;
   }
   #news-articles-index {
