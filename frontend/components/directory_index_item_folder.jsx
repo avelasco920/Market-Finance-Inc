@@ -2,7 +2,7 @@ import React from 'react';
 import DirectoryIndexItemCompany from './directory_index_item_company';
 
 const DirectoryIndexItemFolder = props => {
-  const { folderName, folderContent } = props;
+  const { folderName, folderContent, switchCompany } = props;
   return (
     <div>
       <div
@@ -12,7 +12,11 @@ const DirectoryIndexItemFolder = props => {
         <h3>{folderName}</h3>
       </div>
       { folderContent.map( company =>
-        <DirectoryIndexItemCompany key={company.name} company={company}/>
+        <DirectoryIndexItemCompany
+          key={company.name}
+          company={company}
+          switchCompany={switchCompany}
+        />
       )}
     </div>
   );

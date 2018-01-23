@@ -3,7 +3,7 @@ import React from 'react';
 const DirectoryIndexItemCompany = props => {
   const { company } = props;
   return (
-    <div className='directory-company'>
+    <div className='directory-company' onClick={() => props.switchCompany(company)}>
       <h4>{company.name}</h4>
       <h3>{company.symbol}</h3>
     </div>

@@ -5,16 +5,16 @@
   box-sizing: border-box;
 }
 
-.directory-show {
-  transform: translateX(0);
-  width: 300px;
-}
-
 .directory-hidden {
   transform: translateX(-300px);
   width: 0;
 }
 
+.directory-show {
+  transform: translateX(0);
+  width: 300px;
+  min-width: 300px;
+}
 
 .filter {
   height: 65px;

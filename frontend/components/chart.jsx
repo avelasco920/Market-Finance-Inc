@@ -7,7 +7,7 @@ class Chart extends React.Component {
     return(
       <div id='chart'>
         <TradingViewWidget
-          symbol="AAPL"
+          symbol={this.props.company.symbol}
           locale="en"
           autosize
         />

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Chart from './chart';
+import Content from './content';
 
 const mapStateToProps = (state) => {
   return {
@@ -13,4 +13,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Chart);
+)(Content);

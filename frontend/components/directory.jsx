@@ -6,15 +6,15 @@ class Directory extends React.Component {
   componentWillReceiveProps(nextProps) {
     const directory = document.getElementById('directory');
     if (nextProps.directoryHidden === true) {
-      directory.classList.add('directory-hidden');
+      directory.classList.remove('directory-show');
     } else if (nextProps.directoryHidden === false) {
-      directory.classList.remove('directory-hidden');
+      directory.classList.add('directory-show');
     }
   }
 
   render() {
     return(
-      <div id='directory' className='directory-show'>
+      <div id='directory' className='directory-hidden'>
         <DirectoryFilterContainer />
         <DirectoryIndexContainer />
       </div>

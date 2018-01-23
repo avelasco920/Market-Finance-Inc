@@ -5,6 +5,7 @@ import {
   openFolder,
   closeFolder
 } from '../actions/directory_actions';
+import { fetchCompany } from '../actions/company_actions';
 import DirectoryIndex from './directory_index';
 
 const mapStateToProps = (state) => {
@@ -18,7 +19,8 @@ const mapDispatchToProps = dispatch => ({
   fetchDirectoryFolders: () => dispatch(fetchDirectoryFolders()),
   fetchDirectoryIndex: () => dispatch(fetchDirectoryIndex()),
   openFolder: folderName => dispatch(openFolder(folderName)),
-  closeFolder: folderName => dispatch(closeFolder(folderName))
+  closeFolder: folderName => dispatch(closeFolder(folderName)),
+  fetchCompany: company => dispatch(fetchCompany(company))
 });
 
 export default connect(

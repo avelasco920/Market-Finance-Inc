@@ -7,13 +7,13 @@ class NewsArticlesIndex extends React.Component {
   }
 
   render() {
-    const { newsArticlesLoading, newsArticles } = this.props;
+    const { newsArticlesLoading, newsArticles, company } = this.props;
     if (newsArticlesLoading) {
       return null;
     } else {
       return(
         <div id='news-articles-wrapper'>
-          <h4>News about AAPL</h4>
+          <h4>News about {company.symbol}</h4>
           <ul id='news-articles-index'>
             { newsArticles.map( (newsArticle, i) =>
               <NewsArticlesIndexItem key={i} newsArticle={newsArticle}/>

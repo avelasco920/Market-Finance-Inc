@@ -7,7 +7,8 @@ import NewsArticlesIndex from './news_articles_index';
 const mapStateToProps = (state) => {
   return {
     newsArticles: state.entities.newsArticles,
-    newsArticlesLoading: state.ui.newsArticlesLoading
+    newsArticlesLoading: state.ui.newsArticlesLoading,
+    company: state.entities.company
   };
 };
 

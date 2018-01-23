@@ -1,15 +1,15 @@
 import React from 'react';
-import Chart from './chart';
+import ChartContainer from './chart_container';
 import NewsArticlesIndexContainer from './news_articles_index_container';
 
-const Content = () => (
+const Content = props => (
   <div id='content-wrapper-fixed'>
     <div id='content-wrapper'>
       <div id='content-header'>
-        <h1>AAPL</h1><h4>Apple</h4>
+        <h1>{props.company.symbol}</h1><h4>{props.company.name}</h4>
       </div>
       <div id='content'>
-        <Chart />
+        <ChartContainer />
         <NewsArticlesIndexContainer />
       </div>
     </div>

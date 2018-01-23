@@ -1,11 +1,11 @@
 import React from 'react';
 import NavbarContainer from './navbar_container';
-import Content from './content';
+import ContentContainer from './content_container';
 
 const CompanyShow = () => (
   <div className='company-show'>
     <NavbarContainer />
-    <Content />
+    <ContentContainer />
   </div>
 );
 

@@ -6,6 +6,7 @@ class DirectoryIndex extends React.Component {
   constructor(props) {
     super(props);
     this.toggleFolder = this.toggleFolder.bind(this);
+    this.switchCompany = this.switchCompany.bind(this);
   }
 
   componentWillMount() {
@@ -20,6 +21,10 @@ class DirectoryIndex extends React.Component {
     }
   }
 
+  switchCompany(company) {
+    this.props.fetchCompany(company);
+  }
+
   render() {
     const { directoryContent, directoryLoading } = this.props;
     if ( directoryLoading ) {
@@ -28,7 +33,11 @@ class DirectoryIndex extends React.Component {
       return(
         <div id='directory-index'>
           { directoryContent.map( company =>
-            <DirectoryIndexItemCompany key={company.name} company={company} />
+            <DirectoryIndexItemCompany
+              key={company.name}
+              company={company}
+              switchCompany={this.switchCompany}
+            />
           )}
         </div>
       );
@@ -41,6 +50,7 @@ class DirectoryIndex extends React.Component {
               folderName={folderName}
               folderContent={directoryContent[folderName]}
               toggleFolder={this.toggleFolder}
+              switchCompany={this.switchCompany}
             />
           )}
         </div>
