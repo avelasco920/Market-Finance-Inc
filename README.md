@@ -60,3 +60,4 @@ dimensions for the adjacent `Chart` and `NewsIndex`.
   done with CSS3 and no external library.
 
 ![Responsive](https://s3-us-west-1.amazonaws.com/market-finance/responsive.gif)
+
