@@ -22,7 +22,6 @@ and Motley Fool
 + HTML5
 + CSS3
 + Sass
-+ SassLoader
 + Webpack
 + Babel
 + ES6
